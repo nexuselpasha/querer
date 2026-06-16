@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Querer — Berk</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap');
+    
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+    }
+    
+    h1, h2, h3, .display-font {
+      font-family: 'Space Grotesk', sans-serif;
+      letter-spacing: -0.04em;
+    }
+    
+    .glass {
+      background: rgba(15, 23, 42, 0.75);
+      backdrop-filter: blur(32px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .hero-bg {
+      background: radial-gradient(circle at 25% 25%, rgba(99, 102, 241, 0.45) 0%, transparent 60%),
+                  radial-gradient(circle at 75% 75%, rgba(192, 132, 252, 0.35) 0%, transparent 65%);
+    }
+    
+    .gradient-text {
+      background: linear-gradient(90deg, #e0e7ff, #818cf8, #c084fc, #f0abfc);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    
+    .project-card {
+      transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .project-card:hover {
+      transform: translateY(-12px) scale(1.02);
+      box-shadow: 0 30px 60px -15px rgb(129 140 248 / 0.3);
+    }
+  </style>
+</head>
+
+<body class="bg-zinc-950 text-white overflow-x-hidden">
+  <!-- Background -->
+  <div class="fixed inset-0 hero-bg pointer-events-none"></div>
+  <div class="fixed inset-0 bg-[radial-gradient(#27272a_0.8px,transparent_1px)] [background-size:40px_40px] opacity-20 pointer-events-none"></div>
+
+  <!-- NAV -->
+  <nav class="fixed top-0 left-0 right-0 z-50 glass border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-8 py-6 flex justify-between items-center">
+      <div class="flex items-center gap-3">
+        <div class="w-9 h-9 bg-gradient-to-br from-violet-500 to-fuchsia-500 rounded-2xl flex items-center justify-center font-black text-2xl shadow-xl shadow-violet-500/50">Q</div>
+        <span class="text-3xl font-bold tracking-tighter display-font">QUERER</span>
+      </div>
+      
+      <div class="hidden md:flex items-center gap-10 text-sm font-medium">
+        <a href="#about" class="hover:text-violet-400 transition-colors">Hakkımda</a>
+        <a href="#projects" class="hover:text-violet-400 transition-colors">Projeler</a>
+        <a href="#skills" class="hover:text-violet-400 transition-colors">Yetenekler</a>
+        <a href="#contact" class="hover:text-violet-400 transition-colors">İletişim</a>
+      </div>
+      
+      <a href="#contact" 
+         class="px-8 py-3.5 bg-white text-zinc-900 rounded-3xl font-semibold hover:bg-white/90 transition-all active:scale-95 flex items-center gap-2">
+        İşbirliği Yapalım
+        <i class="fa-solid fa-arrow-right text-sm"></i>
+      </a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="min-h-screen flex items-center pt-20 relative">
+    <div class="max-w-7xl mx-auto px-8 grid md:grid-cols-2 gap-16 items-center">
+      <div class="space-y-10">
+        <div class="inline-flex items-center gap-3 px-6 py-3 glass rounded-3xl text-sm">
+          <div class="w-2.5 h-2.5 bg-emerald-400 rounded-full animate-ping"></div>
+          <span class="font-medium">Available for new projects</span>
+        </div>
+        
+        <h1 class="text-7xl md:text-[5.8rem] leading-[1.05] font-bold tracking-tighter display-font">
+          Geleceği<br>
+          <span class="gradient-text">kodluyorum.</span>
+        </h1>
+        
+        <p class="text-2xl text-zinc-400 max-w-lg">
+          Estetik arayüzler, güçlü backend sistemleri ve unutulmaz dijital deneyimler.
+        </p>
+        
+        <div class="flex flex-wrap gap-5 pt-4">
+          <a href="#projects" 
+             class="px-10 py-5 bg-gradient-to-r from-violet-600 to-fuchsia-600 rounded-3xl font-semibold text-lg hover:scale-105 transition-all shadow-lg shadow-violet-500/30">
+            Projelerimi Gör
+          </a>
+          <a href="#contact" 
+             class="px-10 py-5 border border-white/30 hover:bg-white/5 rounded-3xl font-medium text-lg transition-all">
+            İletişime Geç
+          </a>
+        </div>
+      </div>
+      
+      <div class="relative">
+        <img src="profile.jpg" alt="Berk" 
+             class="w-full max-w-lg rounded-3xl border border-white/10 shadow-2xl shadow-violet-500/30">
+        <div class="absolute -bottom-5 -left-5 glass px-7 py-5 rounded-3xl">
+          <p class="text-sm text-zinc-400">Based in Turkey</p>
+          <p class="text-xl font-semibold">UTC+3</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ABOUT -->
+  <section id="about" class="py-32 border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-8">
+      <h2 class="text-6xl font-bold mb-16 display-font">Hakkımda</h2>
+      <div class="grid md:grid-cols-12 gap-16 items-center">
+        <div class="md:col-span-7 space-y-8 text-[1.35rem] leading-relaxed text-zinc-300">
+          <p>Yazılımı bir sanat formu olarak görüyorum. Kod sadece araç, asıl mesele <span class="text-white">insan deneyimi</span> yaratmak.</p>
+          <p>Querer markasıyla, temiz, hızlı ve uzun ömürlü dijital ürünler tasarlıyorum.</p>
+        </div>
+        <div class="md:col-span-5 glass p-10 rounded-3xl">
+          <h3 class="text-sm uppercase tracking-[2px] text-zinc-400 mb-6">Şu anda</h3>
+          <div class="grid grid-cols-2 gap-4 text-lg">
+            <div class="bg-white/5 p-5 rounded-2xl">Javascript</div>
+            <div class="bg-white/5 p-5 rounded-2xl">Java</div>
+            <div class="bg-white/5 p-5 rounded-2xl">Python</div>
+            <div class="bg-white/5 p-5 rounded-2xl">Html, Css</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS - KÜÇÜLTÜLMÜŞ HALİ -->
+  <section id="projects" class="py-20 bg-zinc-900/50">
+    <div class="max-w-7xl mx-auto px-8">
+      <h2 class="text-5xl font-bold mb-12 display-font">Seçili Projeler</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="project-card glass rounded-3xl overflow-hidden group cursor-pointer">
+          <div class="h-64 bg-gradient-to-br from-zinc-800 to-black flex items-center justify-center text-7xl transition-all group-hover:scale-110">🌌</div>
+          <div class="p-7">
+            <h3 class="text-2xl font-semibold display-font">Querer AI Dashboard</h3>
+            <p class="text-zinc-400 mt-2 text-base">Gerçek zamanlı yapay zeka analitik platformu</p>
+          </div>
+        </div>
+        
+        <div class="project-card glass rounded-3xl overflow-hidden group cursor-pointer">
+          <div class="h-64 bg-gradient-to-br from-zinc-800 to-black flex items-center justify-center text-7xl transition-all group-hover:scale-110">⚡</div>
+          <div class="p-7">
+            <h3 class="text-2xl font-semibold display-font">Querer Studio</h3>
+            <p class="text-zinc-400 mt-2 text-base">Modern Studio Yazılımı</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="py-32">
+    <div class="max-w-7xl mx-auto px-8">
+      <h2 class="text-6xl font-bold mb-16 display-font">Yetenekler</h2>
+      <div class="grid md:grid-cols-2 gap-x-20 gap-y-12">
+        <div class="space-y-12">
+          <div>
+            <div class="flex justify-between mb-4 text-lg">
+              <span>JavaScript</span>
+              <span class="font-mono text-emerald-400">99%</span>
+            </div>
+            <div class="h-2 bg-white/10 rounded-3xl overflow-hidden">
+              <div class="h-2 w-[98%] bg-gradient-to-r from-violet-400 to-fuchsia-500 rounded-3xl"></div>
+            </div>
+          </div>
+          <div>
+            <div class="flex justify-between mb-4 text-lg">
+              <span>Java</span>
+              <span class="font-mono text-emerald-400">97%</span>
+            </div>
+            <div class="h-2 bg-white/10 rounded-3xl overflow-hidden">
+              <div class="h-2 w-[97%] bg-gradient-to-r from-violet-400 to-fuchsia-500 rounded-3xl"></div>
+            </div>
+          </div>
+        </div>
+        <div class="space-y-12">
+          <div>
+            <div class="flex justify-between mb-4 text-lg">
+              <span>Python</span>
+              <span class="font-mono text-emerald-400">90%</span>
+            </div>
+            <div class="h-2 bg-white/10 rounded-3xl overflow-hidden">
+              <div class="h-2 w-[94%] bg-gradient-to-r from-violet-400 to-fuchsia-500 rounded-3xl"></div>
+            </div>
+          </div>
+          <div>
+            <div class="flex justify-between mb-4 text-lg">
+              <span>CSS, Html</span>
+              <span class="font-mono text-emerald-400">96%</span>
+            </div>
+            <div class="h-2 bg-white/10 rounded-3xl overflow-hidden">
+              <div class="h-2 w-[96%] bg-gradient-to-r from-violet-400 to-fuchsia-500 rounded-3xl"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="py-32 border-t border-white/10">
+    <div class="max-w-4xl mx-auto text-center px-6">
+      <h2 class="text-6xl md:text-7xl font-bold leading-tight display-font mb-10">
+        Birlikte<br>
+        <span class="gradient-text">bir şey yaratalım.</span>
+      </h2>
+      <a href="mailto:querer@querer.com" class="text-3xl text-violet-300 hover:text-white transition-colors">
+        querer@querer.com
+      </a>
+      
+      <div class="mt-16">
+        <a href="https://discord.gg/querer" target="_blank" class="inline-flex items-center gap-4 text-2xl hover:text-violet-400 transition-all">
+          <i class="fa-brands fa-discord text-5xl"></i>
+          <span>Discord’a Katıl</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="py-12 text-center text-zinc-500 text-sm border-t border-white/10">
+    © 2026 Querer — Berk
+  </footer>
+
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+</body>
+</html>
